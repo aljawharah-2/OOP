@@ -17,9 +17,20 @@ count=0
 
 for i in range(10):
 
-    X=input("X Role, choose a place for X\n")
-    if theBoard[X]==' ':
-     theBoard[X] ='X'
+    inp=input(Role + " Role, choose a place for "+ Role + "\n")
+    if theBoard[inp]==' ':
+     theBoard[inp] =Role
      printBoard(theBoard)
+     count=+1
     else:
      print('This place is already exists')
+     continue
+        
+    if Role =='X':
+       Role = 'O'
+    else:
+       Role = 'X'     
+
+
+   
+
