@@ -10,27 +10,40 @@ def printBoard(board):
     print(board['1'] + '|' + board['2'] + '|' + board['3'])
     
  
-printBoard(theBoard)
 
 Role='X'
 count=0
 
 for i in range(10):
-
+    printBoard(theBoard)
     inp=input(Role + " Role, choose a place for "+ Role + "\n")
+    
     if theBoard[inp]==' ':
-     theBoard[inp] =Role
-     printBoard(theBoard)
-     count=+1
+        theBoard[inp] = Role
+        count=+1
+    
     else:
-     print('This place is already exists')
-     continue
+        print('This place is already exists')
+        continue
+        
+# Now we will check if player X or O has won,for every move after 5 moves. 
+    
+    if count >= 5:
+        
+        if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")    
+                break
+                
+        elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ':
+                printBoard(theBoard)
+                print("\nGame Over.\n")                
+                print(" **** " +turn + " won. ****")
+                break
+                        
         
     if Role =='X':
        Role = 'O'
     else:
        Role = 'X'     
-
-
-   
-
