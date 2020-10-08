@@ -57,6 +57,48 @@ for i in range(9):
             print(" **** " +Role + " won. ****")
             break
             
+            
+        elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ':
+            printBoard(theBoard)
+            print("\nGame Over.\n")                
+            print(" **** " +Role + " won. ****")
+            break
+       
+    
+        elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ':
+            printBoard(theBoard)
+            print("\nGame Over.\n")                
+            print(" **** " +Role + " won. ****")
+            break
+            
+            
+        elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ':
+            printBoard(theBoard)
+            print("\nGame Over.\n")                
+            print(" **** " +Role + " won. ****")
+            break
+            
+         
+        elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ':
+            printBoard(theBoard)
+            print("\nGame Over.\n")                
+            print(" **** " +Role + " won. ****")
+            break
+            
+        
+        elif theBoard['3'] == theBoard['5'] == theBoard['7'] != ' ':
+            printBoard(theBoard)
+            print("\nGame Over.\n")                
+            print(" **** " +Role + " won. ****")
+            break
+               
+    if count==9:
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print("Tie")
+
+        
+                
     if Role =='X':
        Role = 'O'
     else:
